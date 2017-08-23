@@ -1,14 +1,9 @@
 package com.bluelampcreative.android_core_java.features;
 
 
-public class MainPresenter implements MainContract.Presenter {
+import com.bluelampcreative.android_core_java.core.BasePresenter;
 
-    private MainContract.View view;
-
-    @Override
-    public void registerView(MainContract.View view) {
-        this.view = view;
-    }
+public class MainPresenter extends BasePresenter<MainContract.View> implements MainContract.Presenter {
 
     @Override
     public void showFragmentClicked() {
